@@ -1,5 +1,4 @@
 import 'package:country_list_app/models/api_result.dart';
-import 'package:country_list_app/models/country.dart';
 import 'package:country_list_app/models/country_response.dart';
 import 'package:country_list_app/services/dio_service.dart';
 import 'package:country_list_app/services/exception_service.dart';

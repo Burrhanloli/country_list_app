@@ -16,7 +16,7 @@ class FavouritesCubit extends Cubit<FavouritesState> {
     emit(const FavouritesState.loading());
     final FireStoreResult<List<Country>> apiResult =
         await favouriteCountryRepository.fetchFavouriteCountryList();
-    apiResult.when(success: (List<Country> data) {
+    apiResult.when(success: (data) {
       emit(FavouritesState.data(data: data));
     }, failure: (error) {
       emit(FavouritesState.error(error: error.toString()));

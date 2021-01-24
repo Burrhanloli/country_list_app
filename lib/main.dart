@@ -5,13 +5,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = SimpleBlocObserver();
-  runApp(FirebaseApp());
+  runApp(
+    const FirebaseApp(),
+  );
 }
 
 class SimpleBlocObserver extends BlocObserver {
   @override
   void onTransition(Bloc bloc, Transition transition) {
     super.onTransition(bloc, transition);
-    print(transition);
+    debugPrint("Event: ${transition.event} ");
   }
 }

@@ -27,12 +27,14 @@ class DioService {
       _dio.interceptors.addAll(interceptors);
     }
     if (kDebugMode) {
-      _dio.interceptors.add(LogInterceptor(
-        responseBody: true,
-        requestHeader: false,
-        responseHeader: false,
-        request: false,
-      ));
+      _dio.interceptors.add(
+        LogInterceptor(
+          responseBody: true,
+          requestHeader: false,
+          responseHeader: false,
+          request: false,
+        ),
+      );
     }
   }
 

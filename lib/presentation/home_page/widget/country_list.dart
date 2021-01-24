@@ -30,26 +30,15 @@ class _CountryListState extends State<CountryList> {
     final currentScroll = _scrollController.position.pixels;
     if (!hasReachedMaxLimit) {
       if (maxScroll == currentScroll) {
-        context
-            .read<CountryCubit>()
-            .loadMoreCountries()
-            .then((value) => setState(() {
-                  _countries.addAll(value.countries);
-                  hasReachedMaxLimit = value.hasReachedMaxLimit;
-                }));
+        context.read<CountryCubit>().loadMoreCountries().then(
+              (value) => setState(() {
+                _countries.addAll(value.countries);
+                hasReachedMaxLimit = value.hasReachedMaxLimit;
+              }),
+            );
       }
     }
   }
-
-  // void _onClick() {
-  //   context
-  //       .read<CountryCubit>()
-  //       .loadMoreCountries()
-  //       .then((value) => setState(() {
-  //             _countries.addAll(value.countries);
-  //             hasReachedMaxLimit = value.hasReachedMaxLimit;
-  //           }));
-  // }
 
   @override
   void dispose() {
@@ -98,10 +87,6 @@ class _CountryListState extends State<CountryList> {
                       child: Padding(
                         padding: EdgeInsets.all(8.0),
                         child: CircularProgressIndicator(),
-                        // child: TextButton(
-                        //   onPressed: _onClick,
-                        //   child: const Text('Load More'),
-                        // ),
                       ),
                     );
                   } else {

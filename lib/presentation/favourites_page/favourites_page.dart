@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FavouritesPage extends StatefulWidget {
-  FavouritesPage({
+  const FavouritesPage({
     Key key,
   }) : super(key: key);
 
@@ -53,34 +53,45 @@ class _FavouritesPageState extends State<FavouritesPage> {
                     ),
                     data: (data) {
                       final int itemCount = data.length + 1;
-                      return ListView.builder(
-                          itemCount: itemCount,
-                          controller: _scrollController,
-                          itemBuilder: (context, index) {
-                            if (index == data.length) {
-                              return Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text("End of list",
-                                      style:
-                                          Theme.of(context).textTheme.caption),
-                                ),
-                              );
-                            } else {
-                              final country = data[index];
-                              return Card(
-                                child: ListTile(
-                                  key: ValueKey<String>(country.code),
-                                  title: Text(
-                                    country.country,
+                      if (data.isEmpty) {
+                        return Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("No Favourite Countries Present",
+                                style: Theme.of(context).textTheme.caption),
+                          ),
+                        );
+                      } else {
+                        return ListView.builder(
+                            itemCount: itemCount,
+                            controller: _scrollController,
+                            itemBuilder: (context, index) {
+                              if (index == data.length) {
+                                return Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text("End of list",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .caption),
                                   ),
-                                  subtitle: Text(
-                                    "code - ${country.code}  region - ${country.region}",
+                                );
+                              } else {
+                                final country = data[index];
+                                return Card(
+                                  child: ListTile(
+                                    key: ValueKey<String>(country.code),
+                                    title: Text(
+                                      country.country,
+                                    ),
+                                    subtitle: Text(
+                                      "code - ${country.code}  region - ${country.region}",
+                                    ),
                                   ),
-                                ),
-                              );
-                            }
-                          });
+                                );
+                              }
+                            });
+                      }
                     },
                     error: (error) => Center(
                       child: Text(

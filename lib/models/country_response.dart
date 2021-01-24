@@ -32,7 +32,7 @@ class CountryResponse {
     if (json['data'] != null) {
       final dataJson = json['data'] as Map<String, dynamic>;
       final List<Country> countries = [];
-      if (dataJson. isNotEmpty) {
+      if (dataJson.isNotEmpty) {
         dataJson.forEach((k, v) {
           countries.add(Country.fromJson(k, v as Map<String, dynamic>));
         });
@@ -54,7 +54,10 @@ class CountryResponse {
     data['access'] = access;
     if (this.data != null) {
       data['data'] = Map.fromEntries(
-          this.data.map((value) => MapEntry(value.code, value.toJson())));
+        this.data.map(
+              (value) => MapEntry(value.code, value.toJson()),
+            ),
+      );
     }
     return data;
   }

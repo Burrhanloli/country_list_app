@@ -48,11 +48,8 @@ class RouterCountry extends RouterBase {
       );
     },
     FavouritesPage: (data) {
-      final args = data.getArgs<FavouritesPageArguments>(
-        orElse: () => FavouritesPageArguments(),
-      );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => FavouritesPage(key: args.key),
+        builder: (context) => const FavouritesPage(),
         settings: data,
       );
     },
@@ -68,21 +65,5 @@ extension RouterCountryExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushHomePage() => push<dynamic>(Routes.homePage);
 
-  Future<dynamic> pushFavouritesPage({
-    Key key,
-  }) =>
-      push<dynamic>(
-        Routes.favouritesPage,
-        arguments: FavouritesPageArguments(key: key),
-      );
-}
-
-/// ************************************************************************
-/// Arguments holder classes
-/// *************************************************************************
-
-/// FavouritesPage arguments holder class
-class FavouritesPageArguments {
-  final Key key;
-  FavouritesPageArguments({this.key});
+  Future<dynamic> pushFavouritesPage() => push<dynamic>(Routes.favouritesPage);
 }

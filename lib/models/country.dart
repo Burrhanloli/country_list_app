@@ -18,7 +18,7 @@ class Country {
     final Map<String, dynamic> data = {};
     data['country'] = country;
     data['region'] = region;
-    data['code'] = region;
+    data['code'] = code;
     return data;
   }
 }

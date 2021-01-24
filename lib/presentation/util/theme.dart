@@ -140,7 +140,9 @@ ThemeData lightTheme() => ThemeData(
           height: 50,
           padding: const EdgeInsets.only(left: 16, right: 16),
           shape: RoundedRectangleBorder(
-            borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(8.0),
+            ),
             side: BorderSide(
               color: lightColorScheme.primary,
               width: 2,
@@ -164,7 +166,9 @@ ThemeData lightTheme() => ThemeData(
           borderSide: BorderSide(
             color: lightColorScheme.primary,
           ),
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
         ),
       ),
       iconTheme: lightIconThemeData,
@@ -204,7 +208,9 @@ ThemeData lightTheme() => ThemeData(
         secondarySelectedColor: lightColorScheme.secondary,
         selectedColor: lightColorScheme.primary,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: lightColorScheme.primary,
             width: 2,
@@ -214,7 +220,9 @@ ThemeData lightTheme() => ThemeData(
       ),
       dialogTheme: DialogTheme(
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: lightColorScheme.primary,
             width: 2,
@@ -276,7 +284,9 @@ ThemeData lightTheme() => ThemeData(
         elevation: 3,
         margin: const EdgeInsets.all(5.0),
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: lightColorScheme.primary,
             width: 2,
@@ -312,7 +322,9 @@ ThemeData lightTheme() => ThemeData(
         borderColor: lightColorScheme.primary,
         selectedBorderColor: lightColorScheme.primary,
         disabledBorderColor: Colors.grey,
-        borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(8.0),
+        ),
         borderWidth: 2,
       ),
       textSelectionTheme: TextSelectionThemeData(
@@ -336,7 +348,9 @@ ThemeData lightTheme() => ThemeData(
         hoverElevation: 8,
         highlightElevation: 8,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: lightColorScheme.primary,
             width: 2,
@@ -348,7 +362,9 @@ ThemeData lightTheme() => ThemeData(
         color: lightColorScheme.background,
         elevation: 5,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: lightColorScheme.primary,
             width: 2,
@@ -363,7 +379,9 @@ ThemeData lightTheme() => ThemeData(
         contentTextStyle: lightTextTheme.bodyText1,
         elevation: 10,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: lightColorScheme.primary,
             width: 2,
@@ -525,7 +543,9 @@ ThemeData darkTheme() => ThemeData(
           height: 50,
           padding: const EdgeInsets.only(left: 16, right: 16),
           shape: RoundedRectangleBorder(
-            borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(8.0),
+            ),
             side: BorderSide(
               color: darkColorScheme.primary,
               width: 2,
@@ -549,7 +569,9 @@ ThemeData darkTheme() => ThemeData(
           borderSide: BorderSide(
             color: darkColorScheme.primary,
           ),
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
         ),
       ),
       iconTheme: darkIconThemeData,
@@ -589,7 +611,9 @@ ThemeData darkTheme() => ThemeData(
         secondarySelectedColor: darkColorScheme.secondary,
         selectedColor: darkColorScheme.primary,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: darkColorScheme.primary,
             width: 2,
@@ -599,7 +623,9 @@ ThemeData darkTheme() => ThemeData(
       ),
       dialogTheme: DialogTheme(
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: darkColorScheme.primary,
             width: 2,
@@ -661,7 +687,9 @@ ThemeData darkTheme() => ThemeData(
         elevation: 3,
         margin: const EdgeInsets.all(5.0),
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: darkColorScheme.primary,
             width: 2,
@@ -697,7 +725,9 @@ ThemeData darkTheme() => ThemeData(
         borderColor: darkColorScheme.primary,
         selectedBorderColor: darkColorScheme.primary,
         disabledBorderColor: Colors.grey,
-        borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(8.0),
+        ),
         borderWidth: 2,
       ),
       textSelectionTheme: TextSelectionThemeData(
@@ -721,7 +751,9 @@ ThemeData darkTheme() => ThemeData(
         hoverElevation: 8,
         highlightElevation: 8,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: darkColorScheme.primary,
             width: 2,
@@ -733,7 +765,9 @@ ThemeData darkTheme() => ThemeData(
         color: darkColorScheme.background,
         elevation: 5,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: darkColorScheme.primary,
             width: 2,
@@ -748,7 +782,9 @@ ThemeData darkTheme() => ThemeData(
         contentTextStyle: darkTextTheme.bodyText1,
         elevation: 10,
         shape: RoundedRectangleBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8.0),
+          ),
           side: BorderSide(
             color: darkColorScheme.primary,
             width: 2,

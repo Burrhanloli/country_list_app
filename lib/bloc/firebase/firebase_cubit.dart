@@ -9,8 +9,8 @@ class FirebaseCubit extends Cubit<FirebaseState> {
     emit(const FirebaseLoading());
     Firebase.initializeApp()
         .then((value) => emit(const FirebaseLoaded()))
-        .catchError(
-          (_) => emit(const FirebaseError()),
-        );
+        .catchError((e) {
+      emit(const FirebaseError());
+    });
   }
 }

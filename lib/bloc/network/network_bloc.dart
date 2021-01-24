@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:country_list_app/bloc/network/network_event.dart';
 import 'package:country_list_app/bloc/network/network_state.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
@@ -18,17 +19,19 @@ class NetworkBloc extends Bloc<NetworkEvent, NetworkState> {
     if (event is ListenConnection) {
       final DataConnectionStatus connectionStatus =
           await connectionChecker.connectionStatus;
-      checkConnection(connectionStatus);
+      await checkConnection(connectionStatus);
       _subscription = connectionChecker.onStatusChange
-          .listen((status) => checkConnection(status));
+          .listen((status) async => checkConnection(status));
     }
     if (event is ConnectionChanged) yield event.connection;
   }
 
-  void checkConnection(DataConnectionStatus status) {
+  Future<void> checkConnection(DataConnectionStatus status) async {
     if (status == DataConnectionStatus.disconnected) {
+      await FirebaseFirestore.instance.disableNetwork();
       add(const ConnectionChanged(connection: ConnectionFailure()));
     } else {
+      await FirebaseFirestore.instance.enableNetwork();
       add(const ConnectionChanged(connection: ConnectionSuccess()));
     }
   }

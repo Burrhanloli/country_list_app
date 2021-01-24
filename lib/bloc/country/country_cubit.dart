@@ -13,7 +13,7 @@ class CountryCubit extends Cubit<CountryState> {
 
   CountryCubit({@required this.countryRepository})
       : assert(countryRepository != null),
-        super(const Idle());
+        super(const Idle(),);
 
   Future<void> loadCountries() async {
     emit(const CountryState.loading());
